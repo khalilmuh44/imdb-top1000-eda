@@ -1,0 +1,72 @@
+From Data Exploration To Data Cleaning 
+------------------------------------
+Data Size 
+Number of rows     : 1000
+Number of columns  : 16
+
+----------------------------------------------------------------------------
+Check Data Types & Columns Names
+
+ Check column names  : Handle column names  
+    
+Check columns that should be integers but were read as objects
+
+Action
+ranking of movie    => It will be converted from object to integer
+year                => It will be converted from object to integer
+runtime             => It will be converted from object to integer
+votes               => It will be converted from object to integer
+gross collection    => It will be converted from object to float
+
+-------------------------------------------------------------------------
+Check Summary Statistics for Numerical Columns
+Action
+
+Inconsistency  : No 
+Outliers       : No
+
+------------------------------------------------------------------------    
+
+Check Summary Statistics for Categorical Columns
+
+Check the columns should be delete : No 
+-----------------------------------------------------------------------
+
+Check Duplicates  : No
+-----------------------------------------------------------------------
+
+Check Missing Values
+	gross collection & metascore  => Missing values will be imputed with the mean
+	certificate                   =>We will remove the rows because the percentage of missing values is small
+-------------------------------------------------------------------------
+
+Column Name                 |  How I clean 
+
+
+ranking of movie            | Drop this column 
+
+year                        | remove the '-' sign and '(I)', '(II)', '(III)' & Convert the final result to integer for consistency               #  done 
+
+certificate                 | Drop Missing Values                                                                                         # done 
+
+runtime                     |  Remove 'min' , convert values to integer , display column values in minutes                                 # done 
+
+votes                       | remove commas and convert it to integer                                                                                                                                       # done 
+
+gross collection            | remove $ and M  ,  Missing values will be imputed with the mean ,
+                             convert the final result to float for consistency and  display the column values in millions                # done
+
+
+metascore                  | Missing values will be imputed with the median  
+
+     
+
+   
+
+
+
+
+                                   
+ 
+ 
+
